@@ -8,6 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITextFieldDelegate> {
+    UIBarButtonItem* btnSend;
+    UIBarButtonItem* btnGetTask;
+    UIBarButtonItem* btnLogin;
+    UILabel* firstNumber;
+    UILabel* secondNumber;
+}
+
+@property (strong) IBOutlet UIBarButtonItem* btnSend;
+@property (strong) IBOutlet UIBarButtonItem* btnGetTask;
+@property (strong) IBOutlet UIBarButtonItem* btnLogin;
+@property (strong) IBOutlet UILabel* firstNumber;
+@property (strong) IBOutlet UILabel* secondNumber;
+
+- (IBAction) btnSendTapped:(id)sender;
+- (IBAction) btnGetTaskTapped:(id)sender;
+- (IBAction) btnLoginTapped:(id)sender;
+- (void) loginCallback;
 
 @end

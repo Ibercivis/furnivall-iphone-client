@@ -16,6 +16,8 @@ static ApplicationState* sharedInstance = nil;
 @synthesize user;
 @synthesize password;
 @synthesize lastErrorMessage;
+@synthesize furnivallEngine;
+@synthesize loggedIn;
 
 #pragma mark Singleton Methods
 // FIXME: [JUANJO] Mirar como se hacen singletons con ARC
@@ -35,6 +37,8 @@ static ApplicationState* sharedInstance = nil;
 - (id) init {
     if (self == [super init]) {
         internetActive = FALSE;
+        loggedIn = FALSE;
+        furnivallEngine = [[MKNetworkEngine alloc] initWithHostName:@"155.210.136.65:8888"];
     }
     return self;
 }

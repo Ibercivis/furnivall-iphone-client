@@ -14,12 +14,16 @@
     NSString* user;
     NSString* password;
     NSString* lastErrorMessage;
+    MKNetworkEngine* furnivallEngine;
+    BOOL loggedIn;
 }
 
 @property (nonatomic) BOOL internetActive;
-@property (nonatomic, retain) NSString* user;
-@property (nonatomic, retain) NSString* password;
-@property (nonatomic, retain) NSString* lastErrorMessage;
+@property (strong) NSString* user;
+@property (strong) NSString* password;
+@property (strong) NSString* lastErrorMessage;
+@property (strong) MKNetworkEngine* furnivallEngine;
+@property BOOL loggedIn;
 
 + (id)instance;
 

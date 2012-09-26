@@ -28,6 +28,10 @@
 		8109096F15EF795A00D5128C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8109096E15EF795A00D5128C /* SystemConfiguration.framework */; };
 		8109097115EF796800D5128C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8109097015EF796800D5128C /* Security.framework */; };
 		8109097515EF840400D5128C /* ApplicationState.m in Sources */ = {isa = PBXBuildFile; fileRef = 8109097415EF840400D5128C /* ApplicationState.m */; };
+		814324F215FE0153009F9CFC /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 814324F015FE0153009F9CFC /* LoginView.m */; };
+		814324F315FE0153009F9CFC /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 814324F115FE0153009F9CFC /* LoginView.xib */; };
+		81C936AE15F4C62300192AE8 /* TKAlertCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C936AB15F4C62300192AE8 /* TKAlertCenter.m */; };
+		81C936AF15F4C62300192AE8 /* UIView+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C936AD15F4C62300192AE8 /* UIView+TKCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +71,13 @@
 		8109097015EF796800D5128C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		8109097315EF840400D5128C /* ApplicationState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ApplicationState.h; path = "sample-client/common/ApplicationState.h"; sourceTree = "<group>"; };
 		8109097415EF840400D5128C /* ApplicationState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ApplicationState.m; path = "sample-client/common/ApplicationState.m"; sourceTree = "<group>"; };
+		814324EF15FE0153009F9CFC /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginView.h; path = "sample-client/controllers/LoginView.h"; sourceTree = "<group>"; };
+		814324F015FE0153009F9CFC /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginView.m; path = "sample-client/controllers/LoginView.m"; sourceTree = "<group>"; };
+		814324F115FE0153009F9CFC /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginView.xib; path = "sample-client/en.lproj/LoginView.xib"; sourceTree = "<group>"; };
+		81C936AA15F4C62300192AE8 /* TKAlertCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TKAlertCenter.h; path = "sample-client/libs/tapku/TKAlertCenter.h"; sourceTree = "<group>"; };
+		81C936AB15F4C62300192AE8 /* TKAlertCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TKAlertCenter.m; path = "sample-client/libs/tapku/TKAlertCenter.m"; sourceTree = "<group>"; };
+		81C936AC15F4C62300192AE8 /* UIView+TKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+TKCategory.h"; path = "sample-client/libs/tapku/UIView+TKCategory.h"; sourceTree = "<group>"; };
+		81C936AD15F4C62300192AE8 /* UIView+TKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+TKCategory.m"; path = "sample-client/libs/tapku/UIView+TKCategory.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +103,6 @@
 				8109097215EF83EC00D5128C /* common */,
 				8109091F15EF61E800D5128C /* controllers */,
 				8109092015EF61F100D5128C /* models */,
-				8109092215EF620A00D5128C /* network */,
 				8109092115EF61FF00D5128C /* libs */,
 				8109092315EF621100D5128C /* resources */,
 				8109090E15EF613C00D5128C /* AppDelegate.h */,
@@ -141,6 +151,8 @@
 			children = (
 				8109091115EF613C00D5128C /* ViewController.h */,
 				8109091215EF613C00D5128C /* ViewController.m */,
+				814324EF15FE0153009F9CFC /* LoginView.h */,
+				814324F015FE0153009F9CFC /* LoginView.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -155,16 +167,10 @@
 		8109092115EF61FF00D5128C /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				81C936A915F4C61500192AE8 /* tapku */,
 				8109094D15EF77CC00D5128C /* MKNetworkKit */,
 			);
 			name = libs;
-			sourceTree = "<group>";
-		};
-		8109092215EF620A00D5128C /* network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = network;
 			sourceTree = "<group>";
 		};
 		8109092315EF621100D5128C /* resources */ = {
@@ -179,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				8109091415EF613C00D5128C /* ViewController_iPhone.xib */,
+				814324F115FE0153009F9CFC /* LoginView.xib */,
 				8109091715EF613C00D5128C /* ViewController_iPad.xib */,
 			);
 			name = ui;
@@ -231,6 +238,17 @@
 				8109097415EF840400D5128C /* ApplicationState.m */,
 			);
 			name = common;
+			sourceTree = "<group>";
+		};
+		81C936A915F4C61500192AE8 /* tapku */ = {
+			isa = PBXGroup;
+			children = (
+				81C936AA15F4C62300192AE8 /* TKAlertCenter.h */,
+				81C936AB15F4C62300192AE8 /* TKAlertCenter.m */,
+				81C936AC15F4C62300192AE8 /* UIView+TKCategory.h */,
+				81C936AD15F4C62300192AE8 /* UIView+TKCategory.m */,
+			);
+			name = tapku;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +305,7 @@
 				8109090A15EF613C00D5128C /* InfoPlist.strings in Resources */,
 				8109091615EF613C00D5128C /* ViewController_iPhone.xib in Resources */,
 				8109091915EF613C00D5128C /* ViewController_iPad.xib in Resources */,
+				814324F315FE0153009F9CFC /* LoginView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +328,9 @@
 				8109096A15EF78CF00D5128C /* MKNetworkEngine.m in Sources */,
 				8109096B15EF78CF00D5128C /* MKNetworkOperation.m in Sources */,
 				8109097515EF840400D5128C /* ApplicationState.m in Sources */,
+				81C936AE15F4C62300192AE8 /* TKAlertCenter.m in Sources */,
+				81C936AF15F4C62300192AE8 /* UIView+TKCategory.m in Sources */,
+				814324F215FE0153009F9CFC /* LoginView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +458,7 @@
 				8109091E15EF613C00D5128C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
